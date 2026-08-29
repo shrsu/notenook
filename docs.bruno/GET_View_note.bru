@@ -1,0 +1,19 @@
+meta {
+  name: GET_View_note
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:8080/note/viewNote?documentId=665751b5af97e9d89d07748a
+  body: none
+  auth: none
+}
+
+query {
+  documentId: 665751b5af97e9d89d07748a
+}
+
+headers {
+  Authorization: bearer {{authToken}}
+}

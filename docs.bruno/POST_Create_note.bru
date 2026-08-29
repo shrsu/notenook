@@ -1,0 +1,22 @@
+meta {
+  name: POST_Create_note
+  type: http
+  seq: 11
+}
+
+post {
+  url: http://localhost:8080/note/createNewNote
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: bearer {{authToken}}
+}
+
+body:json {
+  {
+    "title":"MERN Stack",
+  "subject":"MERN Stack"
+  }
+}

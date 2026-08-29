@@ -1,0 +1,23 @@
+meta {
+  name: PATCH_Update_file_reference
+  type: http
+  seq: 18
+}
+
+patch {
+  url: http://localhost:8080/note/updateNoteFileReferences
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: bearer {{authToken}}
+}
+
+body:json {
+  {
+    "noteId":"665751b5af97e9d89d07748a",
+    "fileName":"sample-note.pdf",
+    "url":"https://your-storage-host/example/sample-note.pdf"
+  }
+}

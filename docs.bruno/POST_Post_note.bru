@@ -1,0 +1,23 @@
+meta {
+  name: POST_Post_note
+  type: http
+  seq: 13
+}
+
+post {
+  url: http://localhost:8080/note/addPostedNote
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: bearer {{authToken}}
+}
+
+body:json {
+  {
+    "title":"MERN stack",
+    "subject":"MERN stack",
+    "noteId":"6663382841eab446b2175b24"
+  }
+}

@@ -1,0 +1,15 @@
+meta {
+  name: DELETE_Delete_file_reference
+  type: http
+  seq: 20
+}
+
+delete {
+  url: http://localhost:8080/note/deleteNoteFileReferences/66585073d31b87073520270b
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: bearer {{authToken}}
+}

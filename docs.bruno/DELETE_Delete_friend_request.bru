@@ -1,0 +1,21 @@
+meta {
+  name: DELETE_Delete_friend_request
+  type: http
+  seq: 21
+}
+
+delete {
+  url: http://localhost:8080/friendRequest/unsendFriendRequest
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: bearer {{authToken}}
+}
+
+body:json {
+  {
+    "receiverId":"66633479b3562f474072e8fc"
+  }
+}

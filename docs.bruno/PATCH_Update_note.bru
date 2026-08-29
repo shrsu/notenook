@@ -1,0 +1,23 @@
+meta {
+  name: PATCH_Update_note
+  type: http
+  seq: 17
+}
+
+patch {
+  url: http://localhost:8080/note/updateNote
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: bearer {{authToken}}
+}
+
+body:json {
+  {
+    "noteId":"665751b5af97e9d89d07748a",
+    "title":"BOCS updated",
+    "subject":"BOCS updated"
+  }
+}

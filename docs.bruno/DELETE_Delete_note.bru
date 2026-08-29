@@ -1,0 +1,15 @@
+meta {
+  name: DELETE_Delete_note
+  type: http
+  seq: 19
+}
+
+delete {
+  url: http://localhost:8080/note/deleteNote/665751b5af97e9d89d07748a
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: bearer {{authToken}}
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header flex space-between center">
+        <a href="<%= homeUrl %>">
+          <img src="/logo.jpeg" alt="" class="logo" />
+        </a>
+        <div class="nav">
+          <a href="<%= homeUrl %>">
+            <button class="button center" role="button">Home</button>
+          </a>
+        </div>
+      </div>
+
+      <div class="content flex row center">
+        <div class="intro flex column center">
+          <h1 class="heading-primary bold">Welcome to notenook!</h1>
+          <h1 class="heading-secondary mt-1 mb-1 bold">
+            Share Notes, Connect, and Grow.
+          </h1>
+          <p class="subheading mt-1 mb-1">
+            Organize your thoughts, connect with others, and learn together.
+          </p>
+        </div>
+
+        <div class="formDiv">
+          <div class="container">
+            <form
+              action="/google/auth/set-username"
+              method="post"
+              class="form flex column center"
+            >
+              <h1>Set Your Username</h1>
+
+              <div class="field flex column">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required />
+                <% if (error) { %>
+                <p class="error-message"><%= error %></p>
+                <% } %>
+              </div>
+              <button type="submit" class="button center">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

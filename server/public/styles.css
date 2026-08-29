@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+body {
+  background-color: #d9edec;
+  height: -webkit-fill-available;
+}
+
+.flex {
+  display: flex;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.header {
+  padding: 1rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.logo {
+  height: 5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: translate(-0.5px, -0.5px) scale(1.02);
+}
+
+.button {
+  background-color: #157ce3;
+  border: 0;
+  border-radius: 100px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  justify-content: center;
+  overflow: hidden;
+  padding: 8px 15px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+.button:hover {
+  background-color: #16437e;
+  color: #ffffff;
+}
+
+.content {
+  min-height: 60vh;
+  gap: 50px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.intro {
+  text-align: center;
+  min-height: 40vh;
+  width: 40%;
+}
+
+.heading-primary {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.heading-secondary {
+  font-size: 2.25rem;
+}
+
+.subheading {
+  font-size: 1.125rem;
+}
+
+.formDiv {
+  width: 600px;
+}
+
+.form {
+  width: 100%;
+  gap: 1rem;
+}
+
+.form h1 {
+  text-align: center;
+}
+
+.field {
+  width: 90%;
+  justify-self: center;
+  border-radius: 5px;
+  background-color: #aaf3ee;
+  padding: 0.5rem 1rem;
+}
+
+.field label {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  color: rgb(74, 74, 74);
+}
+
+.field input {
+  border: none;
+  background-color: transparent;
+  margin-bottom: 0.5rem;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    height: 4rem;
+  }
+
+  .subheading {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .intro {
+    width: 100%;
+  }
+
+  .formDiv {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .heading-secondary {
+    font-size: 1.5rem;
+  }
+
+  .heading-primary {
+    font-size: 1.875rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .formDiv {
+    width: 100%;
+  }
+}

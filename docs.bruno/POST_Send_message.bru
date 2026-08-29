@@ -1,0 +1,21 @@
+meta {
+  name: POST_Send_message
+  type: http
+  seq: 12
+}
+
+post {
+  url: http://localhost:8080/message/send/66584747ca9e899ff02f8ab4
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: bearer {{authToken}}
+}
+
+body:json {
+  {
+    "message":"This is a test Message"
+  }
+}

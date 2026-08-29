@@ -1,0 +1,15 @@
+meta {
+  name: POST_Accept_freind_request
+  type: http
+  seq: 15
+}
+
+post {
+  url: http://localhost:8080/friendRequest/acceptFriendRequest/66633b4b41eab446b2175c38
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: bearer {{authToken}}
+}

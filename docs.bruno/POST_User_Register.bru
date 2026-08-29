@@ -1,0 +1,20 @@
+meta {
+  name: POST_User_Register
+  type: http
+  seq: 10
+}
+
+post {
+  url: http://localhost:8080/user/register
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "username":"testUser",
+    "fullname": "Test User",
+    "email":"test@gmail.com",
+    "password":"TestP@ssword1234."
+  }
+}
