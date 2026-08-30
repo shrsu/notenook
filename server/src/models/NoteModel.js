@@ -22,6 +22,10 @@ const noteSchema = new Schema(
     document: Object,
     comments: [{ type: Schema.Types.ObjectId, ref: "Comment" }],
     markedForReview: { type: Boolean, default: false },
+
+    // When this note was last written into the vector index. Compared against
+    // updatedAt to find notes the assistant hasn't caught up with yet.
+    indexedAt: { type: Date, default: null },
   },
   { timestamps: true }
 );

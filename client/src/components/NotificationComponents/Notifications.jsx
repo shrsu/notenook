@@ -37,7 +37,11 @@ function Notifications() {
       );
 
       if (response.status === 200) {
-        const { userNotifications, postNotifications } = response.data;
+        // Normalise once: a user with no notification list gets an empty
+        // payload, and these values are also written back into context.
+        const { userNotifications = [], postNotifications = [] } =
+          response.data || {};
+
         setFriendNotifications(userNotifications);
         setPostNotifications(postNotifications);
         setUser((prevUser) => ({
@@ -62,8 +66,8 @@ function Notifications() {
     if (!user?.notifications) {
       fetchNotifications();
     } else {
-      setFriendNotifications(user.notifications.userNotifications);
-      setPostNotifications(user.notifications.postNotifications);
+      setFriendNotifications(user.notifications.userNotifications || []);
+      setPostNotifications(user.notifications.postNotifications || []);
     }
   }, [user?.notifications]);
 

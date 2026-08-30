@@ -1,7 +1,9 @@
 const { ChatGoogleGenerativeAI } = require("@langchain/google-genai");
 
 const llm = new ChatGoogleGenerativeAI({
-  model: "gemini-pro",
+  // gemini-pro was retired by Google; keep the model configurable
+  // so a future retirement is an env change rather than a code change.
+  model: process.env.CHAT_MODEL || "gemini-3.5-flash",
   apiKey: process.env.GOOGLE_GENAI_API_KEY,
 });
 

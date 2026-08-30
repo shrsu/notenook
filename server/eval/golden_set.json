@@ -1,0 +1,21 @@
+{
+  "answerable": [
+    { "question": "What is the difference between third normal form and BCNF?", "expectedSource": "Database Normalisation" },
+    { "question": "What is a covering index?", "expectedSource": "Indexing and B-Trees" },
+    { "question": "How does the TCP three way handshake open a connection?", "expectedSource": "TCP Three Way Handshake" },
+    { "question": "Which header lets a client revalidate a cached response?", "expectedSource": "HTTP Caching Headers" },
+    { "question": "What four conditions must hold for deadlock?", "expectedSource": "Process Synchronisation" },
+    { "question": "What causes thrashing?", "expectedSource": "Virtual Memory and Paging" },
+    { "question": "What is the worst case time complexity of quicksort?", "expectedSource": "Time Complexity Basics" },
+    { "question": "When can dynamic programming be applied to a problem?", "expectedSource": "Dynamic Programming" },
+    { "question": "How does round robin scheduling pick the next process?", "expectedSource": "os-scheduling.pdf" },
+    { "question": "What happens during lexical analysis in a compiler?", "expectedSource": "compiler-phases.pdf" }
+  ],
+  "unanswerable": [
+    "What is the capital of Brazil?",
+    "Who won the 2018 football world cup?",
+    "What is my bank account number?",
+    "What is the current price of Bitcoin?",
+    "Who is the chief executive of Tesla?"
+  ]
+}

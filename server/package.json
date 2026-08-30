@@ -4,7 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "eval": "node eval/run_eval.js",
+    "ingest": "node -e \"require('./src/ai/ingest').ingest({source:process.env.SOURCE||'mongo',rebuild:process.env.REBUILD==='1'}).then(r=>{console.log(r);process.exit(0)}).catch(e=>{console.error(e);process.exit(1)})\""
   },
   "keywords": [],
   "author": "",
@@ -13,6 +15,7 @@
     "@apollo/server": "^4.10.4",
     "@graphql-tools/schema": "^10.0.4",
     "@langchain/google-genai": "^0.0.17",
+    "@qdrant/js-client-rest": "^1.12.0",
     "apollo-server-express": "^3.13.0",
     "argon2": "^0.40.1",
     "connect-redis": "^7.1.1",
@@ -34,6 +37,7 @@
     "passport-google-oauth20": "^2.0.0",
     "passport-jwt": "^4.0.1",
     "passport-local": "^1.0.0",
+    "pdfjs-dist": "^4.10.38",
     "redis": "^4.6.14",
     "socket.io": "^4.7.5",
     "uuid": "^9.0.1",

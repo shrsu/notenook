@@ -20,14 +20,16 @@ const getNotifications = async (req, res) => {
         select: "title",
       });
       
-    if (notificationList) {
-      notificationList.userNotifications.sort(
-        (a, b) => b.createdAt - a.createdAt
-      );
-      notificationList.postNotifications.sort(
-        (a, b) => b.createdAt - a.createdAt
-      );
+    // A user who has never received a notification has no list yet. Return the
+    // same shape as a populated one so callers never have to special-case null.
+    if (!notificationList) {
+      return res
+        .status(200)
+        .json({ userNotifications: [], postNotifications: [] });
     }
+
+    notificationList.userNotifications.sort((a, b) => b.createdAt - a.createdAt);
+    notificationList.postNotifications.sort((a, b) => b.createdAt - a.createdAt);
 
     res.status(200).json(notificationList);
   } catch (error) {

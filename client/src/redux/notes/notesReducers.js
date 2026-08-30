@@ -3,7 +3,6 @@ export const notesReducers = {
     state.notes.unshift(action.payload);
   },
   updateUpdatedNote: (state, action) => {
-    console.log(action.payload);
     state.notes = state.notes.map((note) =>
       note._id === action.payload.noteId ? { ...note, ...action.payload } : note
     );

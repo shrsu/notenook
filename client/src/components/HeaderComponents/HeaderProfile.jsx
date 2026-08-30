@@ -7,7 +7,6 @@ import { UserContext } from "../../context/userContext";
 
 function HeaderProfile() {
   const { user } = useContext(UserContext);
-  console.log(user?.avatar);
   return (
     <div className="py-2 px-4 rounded-md">
       <Link

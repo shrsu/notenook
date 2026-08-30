@@ -34,7 +34,7 @@ const savedNotesSlice = createSlice({
         state.error = null;
       })
       .addCase(fetchSavedNotes.fulfilled, (state, action) => {
-        state.savedNotes = action.payload;
+        state.savedNotes = action.payload || [];
         state.loading = false;
       })
       .addCase(fetchSavedNotes.rejected, (state, action) => {
